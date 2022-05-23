@@ -1,0 +1,67 @@
+.mailListCont{
+    background-color:rgb(30, 30, 126);
+        color:white;
+        padding: 2rem;
+    .mailList{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .topPart{
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            padding-bottom: 0.7rem;
+
+            .first{
+                font-size: 1rem;
+                font-weight: 400;
+
+            }
+            .second{
+                font-size: 0.8rem;
+            }
+
+        }
+        .subscribe{
+            display: flex;
+            align-items: center;
+            margin-top: 4px;
+            input{
+                padding: 0.5rem;
+                outline: none;
+                border: none;
+                width: 350px;
+                border-radius: 2px;
+            }
+
+            button{
+                padding:0.5rem 1.3rem;
+                background-color:rgb(57, 188, 240);
+                color: white;
+                outline: none;
+                border: none;
+                border-radius: 2px;
+                margin-left: 3px;
+                cursor: pointer;
+            }
+        }
+        .check{
+            display: flex;
+            align-items: center;
+            padding-top: 10px;
+            input{
+                margin-left: 20px;
+                cursor: pointer;               
+            }
+
+            .message{
+                font-size: 11px;
+                
+            }
+        }
+
+            
+        }
+    }

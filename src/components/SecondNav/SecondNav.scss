@@ -1,0 +1,58 @@
+.optionsmain{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+    height: 50px;
+    color: #fff;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+
+    .optionscont{
+        display: flex;
+        gap: 18px;
+        max-width: 1600px;
+        width: 100%;
+        list-style: none;
+        padding: 0;
+
+        .optionswrapper{
+        
+            .optionsbtn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7rem 1.5rem;
+                border-radius: 50px;
+                font-size: 0.8rem;
+
+                .optionicon{
+                    font-size: 1.2rem;
+                }
+            }
+
+        }
+
+        .optionswrapper1{
+            padding: 0;
+
+            .optionsbtn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0.7rem 1.5rem;
+                border-radius: 50px;
+                font-size: 0.8rem;
+                
+                .optionicon{
+                    margin-right: 5px;
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+
+
+    }
+}

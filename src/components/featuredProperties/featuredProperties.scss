@@ -1,0 +1,59 @@
+.featuredPropCont{
+    padding:1rem 2rem;
+    max-width: 1600px;
+    width: 100%;
+    margin: 0 auto;
+    
+
+    .featuredPropWrapper{
+        display:flex;
+        align-items: center;
+        gap: 30px;
+        .featuredProp{
+            display: flex;
+            flex-direction: column;
+            flex:1;
+            
+            .featuredPropImg{
+                width: 100%;
+                object-fit: cover;
+                height: 100%;
+                flex:1;
+            }
+
+                .featuredPropDetails{
+                    flex:1;
+                    .title1{
+                        font-size: 1vw;
+                        font-weight: 600;
+                        padding:0.5rem 0;
+                    }
+
+                    .place{
+                        color: gray;
+                        font-size: 14px;
+                        padding-bottom: 0.3rem;
+                    }
+
+                    .price{
+                        font-size: 15px;
+                        font-weight: 600;
+                        padding-bottom:0.3rem;
+                    }
+                    .rating{
+                        margin-right: 1rem;
+                        background-color:rgb(30, 30, 126);
+                        color: white;
+                        font-weight: bold;
+                        padding: 0.2rem 0.3rem;
+                        font-size: 10px;
+                    }
+                    .rank{
+                        color: gray;
+                        font-size: 13px;
+                        padding-top: 0.2rem;
+                    }
+                }
+        }
+    }
+}

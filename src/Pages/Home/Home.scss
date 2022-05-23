@@ -1,0 +1,219 @@
+
+.topside{
+    height: 440px;
+    background-color:rgb(30, 30, 126);
+    
+
+.home{
+    
+    margin: 0 auto;
+    overflow-x:hidden;
+   
+    .detail{
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        padding-right: 2rem;
+        padding-left: 2rem;
+        padding-top: 2rem;
+        color: white;
+        gap:2rem;
+        height: 300px;
+        background-color:rgb(30, 30, 126);
+        position: relative;
+        width: 100%;
+
+        .title{
+            font-size: 2.2rem;
+            font-weight: 600;
+        }
+        .description{
+            font-size: 0.9rem;
+        }
+
+        .inorupW{
+            display: flex;
+            .inorup{
+                font-size: 0.8rem;
+                padding: 0.7rem;
+                border: none;
+                white-space: nowrap;
+                background-color: rgb(133, 133, 244);
+                cursor:pointer;
+            }
+        }
+    }
+}
+
+
+.headersearch{
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    position: absolute;
+    bottom: -20px;
+    background-color: white;
+    padding: 1.5rem;
+    border: yellow solid 3px;
+    border-radius: 10px;
+    width:96%;
+
+
+    .searchItem{
+        display: flex;
+        align-items: center;
+       
+        color: gray;
+        font-size: 0.8rem;
+
+        input{
+            border: none;
+            outline: none;
+            padding-left: 10px;
+        }
+
+        .searchtext{
+            padding-left: 10px;
+        }
+
+        .calendar{
+            position: absolute;
+            top:50px;
+        }
+
+        .dateIcon{
+            cursor:pointer; 
+        }
+
+        .counterTab{
+            width: 200px;
+            background-color: white;
+            position: absolute;
+            bottom:-160px;
+            -webkit-box-shadow: 2px 4px 10px 1px rgba(0,0,0.47);
+            box-shadow: 2px 4px 10px 1px rgba(201,201,201,0.47);
+            .counters{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 1rem;
+
+                .counterWrapper{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 10px;
+
+                    span{
+                        text-align: center;
+                        width: 40px;
+                    }
+
+                    button{
+                        width: 20px;
+                        height: 20px;
+                        outline:none;
+                        border: blue solid 1px;
+                        border-radius: 2px;
+                    }
+                }
+
+            }
+        }
+    }
+
+
+}
+
+.footerTop{
+    background-color:rgb(45, 45, 175);
+
+    .listPropertyBtnWrapper{
+        padding: 1rem;
+        display: flex;
+        flex-direction:column;
+        align-items: center;
+        justify-content: center;
+        .listPropertyBtn{
+            border: solid 1px white;
+            padding:0.2rem 1rem;
+            color: white;
+            border-radius:2px;
+            font-size: 13px;
+            cursor:pointer
+        }
+    }
+
+    .linksMain{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .linksWrapper{
+            padding: 1rem;
+            display: flex;
+            gap:20px;
+
+            @media screen and (max-width:848px) {
+                gap: 25px;
+            }
+
+            @media screen and (max-width:760px) {
+                gap: 30px;
+            }
+
+            .link{
+                font-size: 11px;
+                color:white;
+                text-decoration: underline;
+                cursor: pointer;
+
+                @media screen and (max-width:848px) {
+                    font-size: 9px;
+                }
+    
+            }
+        }
+    }
+}
+
+.footerBottom{
+    padding: 1rem 2rem;
+        max-width: 1600px;
+        width: 100%;
+
+        .fBMain{
+            display: flex;
+            justify-content: center;
+        .fbWrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            @media screen and (max-width:848px) {
+               gap: 10px;
+            }
+        
+            .links1Wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                
+
+                .link1{
+                    font-size: 11px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    @media screen and (max-width:768px){
+                        font-size: 9px;
+                    }
+                    
+                }
+            }
+        
+    }
+}
+}
+}
