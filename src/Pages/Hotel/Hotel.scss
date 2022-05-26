@@ -1,0 +1,143 @@
+.hotel{
+    .wrap1{
+        background-color:rgb(30, 30, 126);
+        color: white;
+    }
+
+    .topcont{
+        max-width: 1600px;
+        margin: 0 auto;
+        width: 100%;
+        padding: 2rem 2rem 2rem ;
+
+        .topwrap{
+           display: flex;
+           justify-content: space-between;
+
+           .info{
+               display: flex;
+               flex-direction: column;
+               gap:8px;
+
+               .head{
+                font-size: 1.5rem;
+                font-weight: 800;
+               }
+
+               .loc{
+                font-size: 0.9rem;
+               }
+               .infoloc{
+                    color: rgb(36, 149, 206);
+               }
+               .instruct{
+                font-size: 0.9rem;
+                color: rgb(38, 167, 15);
+               }
+           }
+
+           .bookBtnWrap{
+               .bookBtn{
+                    padding: 0.5rem 1rem;
+                    cursor: pointer;
+                    background-color: rgb(18, 18, 165); ;
+                    color:white;
+                    border: none;
+                    font-weight: 600;
+                    font-size: 1rem;
+                    border-radius: 5px;
+
+                    &:hover{
+                        background-color:rgb(23, 23, 222) ;
+                    }
+
+               }
+           }
+
+        }
+        .imggrid{
+
+            display: grid;
+            grid-template-columns:repeat(auto-fit, minmax(min(400px,100%),1fr));
+            gap:10px;
+            margin: 20px 0;
+
+            .images{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transform: translateX(0);
+                transition: transform ease-in-out 0.2s;
+                &:hover{
+                    transform: translateX(3px);
+
+                }
+
+            }
+
+        }
+
+        .bottomcont{
+            display: flex;
+            justify-content: space-between;
+            gap:10px;
+            
+
+            .bottomleftWrap{
+                width: 82%;
+                padding: 1rem 0;
+                .bottomleft{
+                    display: flex;
+                    flex-direction: column;
+                    gap:20px;
+
+                    p{
+                        font-size: 1rem;
+                        line-height: 1.6rem;
+                    }
+                }
+            }
+            .bottomright{
+                width: 18%;
+                padding: 1rem 0;
+               
+                .bottomrightWrap{
+                display: flex;
+                flex-direction: column;
+                padding: 0.7rem;
+                gap:15px;
+                background-color: #ebf3ff;
+                border-radius: 5px;
+
+                .toph{
+                    font-size: 1rem;
+                    color: rgb(49, 48, 48);
+                    font-weight: 800;
+                }
+
+                p{
+                    font-size: 0.9rem;
+                }
+                .bookBtnWrap2{
+
+                    .bookBtn2{
+                        padding: 0.5rem 1rem;
+                    cursor: pointer;
+                    background-color: rgb(18, 18, 165); ;
+                    color:white;
+                    border: none;
+                    font-weight: 600;
+                    font-size: 0.8rem;
+                    border-radius: 5px;
+                    width: 100%;
+                    }
+                }
+
+                }
+                }
+
+                
+            }
+        }
+
+    }

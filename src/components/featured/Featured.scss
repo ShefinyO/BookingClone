@@ -6,9 +6,11 @@
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
+   
 .featured{
     margin-top: 10px;
     display: grid;
+    z-index: -1;
      
     grid-template-columns: repeat(6,1fr);
     grid-template-rows: 280px 280px;
