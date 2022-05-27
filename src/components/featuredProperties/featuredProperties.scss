@@ -3,16 +3,28 @@
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
+    &::after {
+        content: '';
+        flex: 0 0 12px; 
+      }
+    overflow-x: scroll;
+    overflow-y: hidden;
+    &::-webkit-scrollbar{
+        display: none;
+    }
     
 
     .featuredPropWrapper{
-        display:flex;
-        align-items: center;
-        gap: 30px;
+        display:grid;
+        grid-auto-flow: column;
+        grid-auto-columns: 200px;
+        gap: 20px;
+
         .featuredProp{
             display: flex;
             flex-direction: column;
             flex:1;
+            
             
             .featuredPropImg{
                 width: 100%;

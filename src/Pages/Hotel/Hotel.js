@@ -8,6 +8,64 @@ import MailList from '../../components/MailList/MailList';
 import CloseIcon from '@mui/icons-material/Close';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
+import styled from 'styled-components';
+
+const Slider = styled.div`
+  
+        position: fixed;
+        top:0;
+        left: 0;
+        height: 100vh;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.532);
+        z-index: 99;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: opacity 0.4s ease-in-out;
+        ${({open})=>(open?`opacity:100%`: `opacity:0`)};
+        ${({open})=>(open?`transform:translateY(0)`: `transform:translateY(-100vh)`)};
+      `
+
+
+       const Close = styled.div`
+            position: absolute;
+            top:20px;
+            right:20px;
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        `
+         const SliderWrapper = styled.div`
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height: 100%;
+            gap:30px;
+            transition: 1s;
+
+          `
+
+          const SliderImg = styled.img`
+                 display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 80%;
+                height: 80vh;
+                object-fit: cover;
+            `
+
+           const Arrow = styled.div`  
+                font-size: 2rem;
+                color: white;
+                cursor: pointer;
+            `
+           const Arrow2 = styled.div`  
+            font-size: 2rem;
+            color: white;
+            cursor: pointer;
+        `
 
 const Hotel = () => {
 
@@ -40,22 +98,28 @@ const Hotel = () => {
     setOpen(true)
   }
 
+  
+
+        
+    
+  
+
 
   return (
     <div className='hotel'>
-      <div className='wrap1'>
+      
         <Navbar/>
-        <SecondNav/>
-      </div>
-      {open &&
-      <div style={{opacity:open?100:0}} className="slider">
-        <CloseIcon className='close' onClick={()=>setOpen(false)}/>
-        <div className='sliderwrapper'>
-        <ChevronLeftRoundedIcon className="arrow" onClick={()=>sliderNum!==0 ? setSliderNum(x=>x-1):setSliderNum(photos.length-1)}/>
-          <img className='sliderimg' src={photos[sliderNum].src} alt="selected-image"/>
-          <ChevronRightIcon className="arrow" onClick={()=>sliderNum!==photos.length-1 ? setSliderNum(x=>x+1):setSliderNum(0)}/>  
-        </div> 
-      </div>}
+        <div className='wrap1'><SecondNav/></div>
+      
+  
+      <Slider open={open}>
+        <Close><CloseIcon onClick={()=>setOpen(false)}/></Close>
+        <SliderWrapper>
+        <Arrow><ChevronLeftRoundedIcon className="arrow" onClick={()=>sliderNum!==0 ? setSliderNum(x=>x-1):setSliderNum(photos.length-1)}/></Arrow>
+          <SliderImg  src={photos[sliderNum].src} alt="selected-image"/>
+        <Arrow2><ChevronRightIcon className="arrow" onClick={()=>sliderNum!==photos.length-1 ? setSliderNum(x=>x+1):setSliderNum(0)}/></Arrow2>  
+        </SliderWrapper> 
+      </Slider>
         <div className="topcont">
           <div className="topwrap">
             <div className="info">

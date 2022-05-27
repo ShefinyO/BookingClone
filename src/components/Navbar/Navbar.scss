@@ -2,16 +2,15 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
     background-color:rgb(30, 30, 126);
     padding: 0 2rem;
     color:#fff;
     max-width: 1600px;
+    top:0;
     width: 100%;
     margin: 0 auto;
     position: sticky;
-    top:0;
-    z-index: 999;
+    z-index: 70;
    
     .navWrapper{
         display: flex;
