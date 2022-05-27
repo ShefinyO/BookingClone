@@ -1,9 +1,18 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Hotel.scss'
 import Navbar from '../../components/Navbar/Navbar'
 import SecondNav from '../../components/SecondNav/SecondNav';
+import FooterTop from '../../components/Footer/FooterTop';
+import FooterBottom from '../../components/Footer/FooterBottom';
+import MailList from '../../components/MailList/MailList';
+import CloseIcon from '@mui/icons-material/Close';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import ChevronLeftRoundedIcon from '@mui/icons-material/ChevronLeftRounded';
 
 const Hotel = () => {
+
+  const [sliderNum,setSliderNum] = useState(0);
+  const [open,setOpen] = useState(false)
 
   const photos = [
     {
@@ -25,12 +34,28 @@ const Hotel = () => {
       src: "https://cf.bstatic.com/xdata/images/hotel/max1280x900/261707389.jpg?k=52156673f9eb6d5d99d3eed9386491a0465ce6f3b995f005ac71abc192dd5827&o=&hp=1",
     },
   ];
+
+  const handleSlider=(i)=>{
+    setSliderNum(i)
+    setOpen(true)
+  }
+
+
   return (
     <div className='hotel'>
       <div className='wrap1'>
         <Navbar/>
         <SecondNav/>
       </div>
+      {open &&
+      <div style={{opacity:open?100:0}} className="slider">
+        <CloseIcon className='close' onClick={()=>setOpen(false)}/>
+        <div className='sliderwrapper'>
+        <ChevronLeftRoundedIcon className="arrow" onClick={()=>sliderNum!==0 ? setSliderNum(x=>x-1):setSliderNum(photos.length-1)}/>
+          <img className='sliderimg' src={photos[sliderNum].src} alt="selected-image"/>
+          <ChevronRightIcon className="arrow" onClick={()=>sliderNum!==photos.length-1 ? setSliderNum(x=>x+1):setSliderNum(0)}/>  
+        </div> 
+      </div>}
         <div className="topcont">
           <div className="topwrap">
             <div className="info">
@@ -43,7 +68,7 @@ const Hotel = () => {
           </div>
           <div className='imggrid'>
             {photos.map((photo,i)=>(
-              <img className='images' key={i} src={photo.src} alt="property_image"/>
+              <img className='images' onClick={()=>handleSlider(i)} key={i} src={photo.src} alt="property_image"/>
             ))
             }
           </div>
@@ -78,6 +103,9 @@ const Hotel = () => {
             </div>
           </div>
         </div>
+        <MailList/>
+        <FooterTop/>
+        <FooterBottom/>
         </div>
   )
 }

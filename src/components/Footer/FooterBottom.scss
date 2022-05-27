@@ -1,0 +1,38 @@
+.footerBottom{
+    padding: 1rem 2rem;
+        max-width: 1600px;
+        width: 100%;
+        margin: 0 auto;
+
+        .fBMain{
+            display: flex;
+            justify-content: center;
+        .fbWrapper{
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
+
+            @media screen and (max-width:848px) {
+               gap: 10px;
+            }
+        
+            .links1Wrapper{
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+                
+
+                .link1{
+                    font-size: 11px;
+                    text-decoration: underline;
+                    cursor: pointer;
+                    @media screen and (max-width:768px){
+                        font-size: 9px;
+                    }
+                    
+                }
+            }
+        
+    }
+}
+}
